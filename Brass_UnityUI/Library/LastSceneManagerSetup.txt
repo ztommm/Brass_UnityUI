@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Ainas/UI Elementu Aina.unity
+  isLoaded: 1
+  isActive: 1

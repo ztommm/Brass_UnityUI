@@ -59,13 +59,21 @@ public class AtteluParadisana : MonoBehaviour {
 	}
 
 
-	public void mainitLielumux(){
-		float pasreizejaVertiba = slaideris1.GetComponent<Slider> ().value;
-		kurRadit.transform.localScale = 
-			new Vector2 (1f*pasreizejaVertiba, pasreizejaVertiba);
-	}
+    
+    public void mainitLielumuY()
+    {
+        float pasreizejaVertiba2 = slaideris2.GetComponent<Slider>().value;
+        kurRadit.transform.localScale =
+            new Vector2(1, 1f * pasreizejaVertiba2);
+    }
+    public void mainitLielumuX()
+    {
+        float pasreizejaVertiba = slaideris1.GetComponent<Slider>().value;
+        kurRadit.transform.localScale =
+            new Vector2(1f * pasreizejaVertiba, 1);
+    }
 
-	public void mainitRotaciju(){
+    public void mainitRotaciju(){
 		float pasreizejaVertiba = slaideris2.GetComponent<Slider> ().value;
 		kurRadit.transform.localRotation =
 			Quaternion.Euler (0, 0, pasreizejaVertiba * 360);

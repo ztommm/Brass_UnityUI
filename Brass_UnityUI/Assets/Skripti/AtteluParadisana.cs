@@ -15,6 +15,7 @@ public class AtteluParadisana : MonoBehaviour {
 	public GameObject slaideris1;
 	public GameObject slaideris2;
 
+
     public void PeterAttelosana(bool vertiba)
     {
         Peter.SetActive(vertiba);
@@ -62,15 +63,18 @@ public class AtteluParadisana : MonoBehaviour {
     
     public void mainitLielumuY()
     {
-        float pasreizejaVertiba2 = slaideris2.GetComponent<Slider>().value;
+		float pasreizejaVertiba2 = slaideris2.GetComponent<Slider>().value;
+		float pasreizejaVertiba = slaideris1.GetComponent<Slider>().value;
         kurRadit.transform.localScale =
-            new Vector2(1, 1f * pasreizejaVertiba2);
+			new Vector2(pasreizejaVertiba, 1f * pasreizejaVertiba2);
+		
     }
     public void mainitLielumuX()
     {
-        float pasreizejaVertiba = slaideris1.GetComponent<Slider>().value;
+		float pasreizejaVertiba2 = slaideris2.GetComponent<Slider>().value;
+		float pasreizejaVertiba = slaideris1.GetComponent<Slider>().value;
         kurRadit.transform.localScale =
-            new Vector2(1f * pasreizejaVertiba, 1);
+			new Vector2(1f * pasreizejaVertiba, pasreizejaVertiba2);
     }
 
     public void mainitRotaciju(){

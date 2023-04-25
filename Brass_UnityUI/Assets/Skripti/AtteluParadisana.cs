@@ -36,6 +36,7 @@ public class AtteluParadisana : MonoBehaviour {
     public void PeterFartAttelosana(bool vertiba)
     {
         PeterFart.SetActive(vertiba);
+        Debug.Log("Apsveicu! Atradāt secret pogu!");
     }
 
     public void PaKreisiPeter()

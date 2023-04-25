@@ -21,6 +21,7 @@ public class VardaParadisana : MonoBehaviour {
 	int nejausais;
 
 	public void NolasitTekstu(){
+
 		teksts = ievadesLauksVards.GetComponent<Text>().text;
 		int.TryParse(ievadesLauksVecums.GetComponent<Text>().text, out teksts1);
 		nejausais = Random.Range (0, varianti.Length);

@@ -6,31 +6,33 @@ using UnityEngine.UI;
 public class AtteluParadisana : MonoBehaviour {
     public GameObject Peter;
     public GameObject PeterFart;
-    public GameObject Quagmire;
-    public GameObject Brian;
-    public GameObject paKreisi;
-    public GameObject paLabi;
+    public GameObject Cepure;
+    public GameObject Bikses;
+    public GameObject Krekls;
+    public GameObject Kurpes;
 	public GameObject kurRadit;
 	public Sprite[] koRadit;
 	public GameObject slaideris1;
 	public GameObject slaideris2;
 
+	public void KurpjuAttelosana(bool vertiba)
+	{
+		Kurpes.SetActive(vertiba);
+	}
 
-    public void PeterAttelosana(bool vertiba)
+	public void KrekluAttelosana(bool vertiba)
+	{
+		Krekls.SetActive(vertiba);
+	}
+
+    public void CepureAttelosana(bool vertiba)
     {
-        Peter.SetActive(vertiba);
-        paKreisi.GetComponent<Toggle>().interactable = vertiba;
-        paLabi.GetComponent<Toggle>().interactable = vertiba;
+        Cepure.SetActive(vertiba);
     }
 
-    public void BrianAttelosana(bool vertiba)
+    public void BiksuAttelosana(bool vertiba)
     {
-        Brian.SetActive(vertiba);
-    }
-
-    public void QuagmireAttelosana(bool vertiba)
-    {
-        Quagmire.SetActive(vertiba);
+        Bikses.SetActive(vertiba);
     }
 
     public void PeterFartAttelosana(bool vertiba)
@@ -77,10 +79,4 @@ public class AtteluParadisana : MonoBehaviour {
         kurRadit.transform.localScale =
 			new Vector2(1f * pasreizejaVertiba, pasreizejaVertiba2);
     }
-
-    public void mainitRotaciju(){
-		float pasreizejaVertiba = slaideris2.GetComponent<Slider> ().value;
-		kurRadit.transform.localRotation =
-			Quaternion.Euler (0, 0, pasreizejaVertiba * 360);
-	}
 }
